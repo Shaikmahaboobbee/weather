@@ -13,7 +13,7 @@ function App() {
 
   const checkWeather = async ()=>{
     
-   await axios.get(`http://api.weatherapi.com/v1/current.json?key=9df6c7e7a69640aba70104409253101&q=${city}`)
+   await axios.get(`https://api.weatherapi.com/v1/current.json?key=9df6c7e7a69640aba70104409253101&q=${city}`)
     .then((response)=>{
       setIcon(response.data.current.condition.icon)
       setTemperature("Temperate: "+response.data.current.temp_c +" C")
